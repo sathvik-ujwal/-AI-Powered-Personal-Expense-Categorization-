@@ -54,7 +54,6 @@ DESC_PATTERNS = {
         "Coffee @ {}",
         "Snack from {} bakery",
         "Zomato order - {}",
-        lambda: fake.sentence(nb_words=5),
         "Lunch with colleagues at {restaurant}",
         "Takeout from {fast_food}",
         "Coffee break at {cafe}",
@@ -122,7 +121,6 @@ DESC_PATTERNS = {
         "Dental checkup at {}",
         "Health package booking at {}",
         "Vaccine via {}",
-        lambda: fake.sentence(nb_words=6),
         "Pharmacy purchase: {medicine}",
         "Hospital visit for {reason}",
         "Dental cleaning at {clinic}",
@@ -148,7 +146,6 @@ DESC_PATTERNS = {
         "Gym membership renewal at {}",
         "Manicure at {}",
         "Haircut at {}",
-        lambda: fake.sentence(nb_words=4),
         "Hair salon appointment",
         "Spa day at {spa}",
         "Gym membership fee",
@@ -174,7 +171,6 @@ DESC_PATTERNS = {
         "Books from {} Bookstore",
         "School fee for grade {}",
         "Workshop fee at {}",
-        lambda: fake.sentence(nb_words=5),
         "School tuition for {child}",
         "Online course enrollment",
         "Textbook purchase for {subject}",
@@ -200,7 +196,6 @@ DESC_PATTERNS = {
         "Late payment penalty",
         "Refund credited",
         "Cashback received",
-        lambda: fake.word(),
         "Gift for {occasion}",
         "Donation to {cause}",
         "Lottery ticket purchase",
@@ -239,7 +234,6 @@ DESC_PATTERNS = {
         "Dog grooming at {}",
         "Pet vaccine at {} clinic",
         "Aquarium supplies from {}",
-        lambda: fake.sentence(nb_words=5),
         "Veterinary visit for {pet}",
         "Pet food purchase",
         "Grooming for {pet}",
@@ -252,7 +246,6 @@ DESC_PATTERNS = {
         "School bus fee for {}",
         "Tuition class fee at {}",
         "Kids playzone entry at {}",
-        lambda: fake.sentence(nb_words=4),
         "Nursery fee for {child}",
         "Diaper purchase from {store}",
         "After-school program fee",
@@ -271,7 +264,6 @@ AMBIGUOUS_PATTERNS = [
     "Purchase at {}",
     "Service fee from {}",
     "Unknown transaction",
-    lambda: fake.sentence(),
     "Expense for {}",
     "Bill payment",
     "Online transaction",
@@ -318,16 +310,6 @@ def generate_description(pattern):
     else:
         return pattern
 
-def inject_noise(text):
-    if random.random() < 0.1:
-        pos = random.randint(0, len(text)-1)
-        if random.random() < 0.5:
-            text = text[:pos] + text[pos+1:]
-        else:
-            text = text[:pos] + text[pos] + text[pos:]
-    if random.random() < 0.05:
-        text = text.replace(" ", random.choice([" ", "  ", "  pls ", " thx "]), 1)
-    return text
 
 START = datetime(2024,6,1)
 END = datetime(2025,6,1)
@@ -336,12 +318,12 @@ records = []
 tx_id = 1
 for category, num in counts.items():
     for _ in range(num):
-        if random.random() < 0.2:
+        if random.random() < 0.05:
             pattern = random.choice(AMBIGUOUS_PATTERNS)
         else:
             pattern = random.choice(DESC_PATTERNS.get(category, [lambda: fake.sentence()]))
         desc = generate_description(pattern)
-        desc = inject_noise(desc)
+      
 
         
         dt = random_datetime(START, END)
@@ -362,4 +344,4 @@ for category, num in counts.items():
         tx_id += 1
 
 df = pd.DataFrame(records)
-df.to_csv('complex_transactions_faker1.csv', index=False)
+df.to_csv('complex_transactions_faker2.csv', index=False)
