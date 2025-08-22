@@ -1,0 +1,21 @@
+{
+  "description_templates": [
+    "Entertainment expense at {merchant}",
+    "Payment to {merchant}",
+    "Spend on {merchant}",
+    "Paid {amount} for services at {merchant}"
+  ],
+  "merchants": [
+    "PVR Cinemas",
+    "INOX",
+    "Carnival Cinemas",
+    "Cinepolis",
+    "Netflix",
+    "Amazon Prime",
+    "Disney+ Hotstar",
+    "Spotify",
+    "BookMyShow",
+    "Paytm Insider"
+  ],
+  "amount_range": [200, 5000]
+}

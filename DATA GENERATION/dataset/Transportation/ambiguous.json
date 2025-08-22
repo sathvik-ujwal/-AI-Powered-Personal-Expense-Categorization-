@@ -1,0 +1,16 @@
+{
+  "description_templates": [
+    "Paid {merchant} for ride",
+    "Travel expense with {merchant} costing {amount}",
+    "Fare paid to {merchant}",
+    "Transport charges: {merchant} {amount}"
+  ],
+  "merchants": [
+    "Ola",
+    "Uber",
+    "Rapido",
+    "Meru Cabs",
+    "RedBus"
+  ],
+  "amount_range": [100, 1500]
+}

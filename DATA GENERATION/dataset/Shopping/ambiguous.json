@@ -1,0 +1,14 @@
+{
+  "merchants": [
+    "Amazon", "Flipkart", "Myntra", "Reliance Trends", "Big Bazaar", 
+    "DMart", "Shoppers Stop", "Lifestyle", "Croma", "Tata Cliq"
+  ],
+  "amount_range": [100, 1000000],
+  "description_templates": [
+    "Purchase at {merchant}",
+    "Shopping at {merchant}",
+    "Payment to {merchant}",
+    "Transaction with {merchant}",
+    "Order placed on {merchant}"
+  ]
+}

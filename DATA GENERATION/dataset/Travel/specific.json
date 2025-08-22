@@ -1,0 +1,49 @@
+{
+  "items": {
+    "flight": {
+      "merchants": ["Air India", "Indigo", "Vistara", "SpiceJet", "GoAir"],
+      "amount_range": [3000, 20000],
+      "description_templates": [
+        "Booked {item} ticket with {merchant}",
+        "Flight booking with {merchant}",
+        "Paid {amount} for {item} at {merchant}"
+      ]
+    },
+    "hotel": {
+      "merchants": ["Taj Hotels", "Marriott", "OYO Rooms", "ITC Hotels", "Radisson Blu"],
+      "amount_range": [2000, 50000],
+      "description_templates": [
+        "Booked {item} at {merchant}",
+        "Hotel stay reservation with {merchant}",
+        "Payment of {amount} for {item} at {merchant}"
+      ]
+    },
+    "train": {
+      "merchants": ["IRCTC", "Indian Railways"],
+      "amount_range": [200, 2000],
+      "description_templates": [
+        "Purchased {item} ticket with {merchant}",
+        "Train reservation at {merchant}",
+        "Paid {amount} for {item} with {merchant}"
+      ]
+    },
+    "bus": {
+      "merchants": ["RedBus", "KSRTC", "VRL Travels", "SRS Travels"],
+      "amount_range": [100, 3000],
+      "description_templates": [
+        "Bus booking through {merchant}",
+        "Purchased {item} ticket from {merchant}",
+        "Paid {amount} for {item} with {merchant}"
+      ]
+    },
+    "cab": {
+      "merchants": ["Ola", "Uber", "Meru Cabs", "Rapido"],
+      "amount_range": [50, 2000],
+      "description_templates": [
+        "Booked {item} ride with {merchant}",
+        "Paid {amount} for {item} with {merchant}",
+        "Cab booking at {merchant}"
+      ]
+    }
+  }
+}

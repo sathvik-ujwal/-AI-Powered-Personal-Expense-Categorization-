@@ -1,0 +1,17 @@
+{
+  "description_templates": [
+    "Paid {amount} for {merchant} subscription",
+    "Enrolled for a course at {merchant}",
+    "Learning expense with {merchant}",
+    "Registered at {merchant} for classes"
+  ],
+  "merchants": [
+    "BYJU'S",
+    "Unacademy",
+    "Coursera",
+    "Udemy",
+    "edX",
+    "Skillshare"
+  ],
+  "amount_range": [500, 20000]
+}

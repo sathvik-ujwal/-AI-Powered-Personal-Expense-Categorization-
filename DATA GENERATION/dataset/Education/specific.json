@@ -1,0 +1,49 @@
+{
+  "items": {
+    "School Fees": {
+      "description_templates": [
+        "Paid {amount} towards {merchant} school fee",
+        "School tuition at {merchant}",
+        "Admission charges at {merchant}"
+      ],
+      "merchants": ["Delhi Public School", "DAV Public School", "National Public School"],
+      "amount_range": [5000, 60000]
+    },
+    "College Fees": {
+      "description_templates": [
+        "Paid {amount} for semester at {merchant}",
+        "College fee submission at {merchant}",
+        "Tuition at {merchant}"
+      ],
+      "merchants": ["IIT Delhi", "IIT Bombay", "IIM Bangalore", "NIT Trichy"],
+      "amount_range": [10000, 200000]
+    },
+    "Online Course": {
+      "description_templates": [
+        "Paid {amount} for {merchant} online course",
+        "Enrolled in course at {merchant}",
+        "Learning program on {merchant}"
+      ],
+      "merchants": ["Udemy", "Coursera", "edX", "Skillshare"],
+      "amount_range": [500, 10000]
+    },
+    "Coaching": {
+      "description_templates": [
+        "Coaching class at {merchant}",
+        "Paid {amount} for {merchant} coaching",
+        "Enrolled for test prep at {merchant}"
+      ],
+      "merchants": ["FIITJEE", "Aakash Institute", "Allen Career Institute"],
+      "amount_range": [2000, 80000]
+    },
+    "Books & Materials": {
+      "description_templates": [
+        "Bought books from {merchant}",
+        "Paid {amount} for study materials at {merchant}",
+        "Educational material ordered from {merchant}"
+      ],
+      "merchants": ["Amazon", "Flipkart", "Sapna Book House"],
+      "amount_range": [200, 5000]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "items": {
+    "Movies": {
+      "description_templates": [
+        "Watched a movie at {merchant}",
+        "Booked cinema tickets from {merchant}",
+        "Paid {amount} for tickets at {merchant}"
+      ],
+      "merchants": ["PVR Cinemas", "INOX", "Carnival Cinemas", "Cinepolis"],
+      "amount_range": [200, 2000]
+    },
+    "Concerts": {
+      "description_templates": [
+        "Attended live concert at {merchant}",
+        "Music show tickets purchased from {merchant}"
+      ],
+      "merchants": ["BookMyShow", "Paytm Insider", "NH7 Weekender"],
+      "amount_range": [500, 10000]
+    },
+    "Streaming Services": {
+      "description_templates": [
+        "Subscription renewed for {merchant}",
+        "Streaming expense at {merchant}",
+        "Paid {amount} for {merchant} subscription"
+      ],
+      "merchants": ["Netflix", "Amazon Prime", "Disney+ Hotstar", "Spotify", "Apple Music"],
+      "amount_range": [200, 2000]
+    },
+    "Gaming": {
+      "description_templates": [
+        "Purchased game from {merchant}",
+        "Online gaming expense with {merchant}"
+      ],
+      "merchants": ["Steam", "Epic Games", "PlayStation Store", "Xbox Live"],
+      "amount_range": [500, 6000]
+    },
+    "Events": {
+      "description_templates": [
+        "Attended event hosted by {merchant}",
+        "Entry pass purchased at {merchant}"
+      ],
+      "merchants": ["BookMyShow", "Paytm Insider", "Eventbrite"],
+      "amount_range": [300, 8000]
+    }
+  }
+}

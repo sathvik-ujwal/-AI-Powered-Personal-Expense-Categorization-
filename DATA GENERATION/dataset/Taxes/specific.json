@@ -1,0 +1,38 @@
+{
+  "items": {
+    "Income Tax": {
+      "merchants": ["Income Tax Department", "Govt Treasury"],
+      "amount_range": [1000, 100000],
+      "description_templates": [
+        "Income tax paid to {merchant}",
+        "Filed annual income tax with {merchant}",
+        "Paid {amount} as income tax at {merchant}"
+      ]
+    },
+    "GST": {
+      "merchants": ["GST Portal", "Govt Treasury"],
+      "amount_range": [500, 50000],
+      "description_templates": [
+        "Filed GST payment at {merchant}",
+        "GST submitted to {merchant}"
+      ]
+    },
+    "Property Tax": {
+      "merchants": ["Municipal Corporation", "State Tax Office"],
+      "amount_range": [1000, 30000],
+      "description_templates": [
+        "Paid property tax at {merchant}",
+        "Property tax submitted via {merchant}",
+        "Paid {amount} for property tax through {merchant}"
+      ]
+    },
+    "Road Tax": {
+      "merchants": ["RTO", "State Tax Office"],
+      "amount_range": [500, 15000],
+      "description_templates": [
+        "Road tax payment done at {merchant}",
+        "Paid vehicle tax to {merchant}"
+      ]
+    }
+  }
+}

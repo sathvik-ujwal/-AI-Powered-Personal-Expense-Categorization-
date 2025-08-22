@@ -1,0 +1,17 @@
+{
+  "description_templates": [
+    "Paid taxes via {merchant}",
+    "Filed tax payment at {merchant}",
+    "Government tax paid through {merchant}",
+    "Paid {amount} for tax processing via {merchant}"
+  ],
+  "merchants": [
+    "Income Tax Department",
+    "GST Portal",
+    "State Tax Office",
+    "Municipal Corporation",
+    "Govt Treasury",
+    "Tax Payment Portal"
+  ],
+  "amount_range": [500, 50000]
+}

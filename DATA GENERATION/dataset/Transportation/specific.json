@@ -1,0 +1,49 @@
+{
+  "items": {
+    "Cab": {
+      "description_templates": [
+        "Cab ride with {merchant}",
+        "Booked cab from {merchant}",
+        "Taxi fare paid to {merchant}"
+      ],
+      "merchants": ["Ola", "Uber", "Rapido", "Meru Cabs"],
+      "amount_range": [100, 1200]
+    },
+    "Bus": {
+      "description_templates": [
+        "Bus fare paid to {merchant}",
+        "Booked bus ticket from {merchant}",
+        "Bus service {merchant}"
+      ],
+      "merchants": ["RedBus", "KSRTC", "APSRTC"],
+      "amount_range": [200, 1500]
+    },
+    "Metro": {
+      "description_templates": [
+        "Metro ticket purchased from {merchant}",
+        "Metro fare paid via {merchant}",
+        "Metro travel with {merchant}"
+      ],
+      "merchants": ["Delhi Metro", "Bangalore Metro", "Mumbai Metro"],
+      "amount_range": [30, 500]
+    },
+    "Train": {
+      "description_templates": [
+        "Train ticket booked with {merchant} for {amount}",
+        "Rail travel using {merchant}",
+        "Paid {amount} for train journey with {merchant}"
+      ],
+      "merchants": ["IRCTC", "South Western Railway", "Southern Railway"],
+      "amount_range": [200, 2500]
+    },
+    "Flight": {
+      "description_templates": [
+        "Flight booking with {merchant}",
+        "Paid {amount} for flight on {merchant}",
+        "Air travel via {merchant}"
+      ],
+      "merchants": ["IndiGo", "Air India", "SpiceJet", "Vistara"],
+      "amount_range": [1500, 12000]
+    }
+  }
+}
