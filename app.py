@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
+from werkzeug.security import generate_password_hash, check_password_hash
 from flask_session import Session
 from pymongo import MongoClient
 import pickle
@@ -9,21 +10,21 @@ import joblib
 
 
 model = joblib.load('models/xgb_best_model.pkl')
+if hasattr(model, 'use_label_encoder'):
+    delattr(model, 'use_label_encoder')
 label_mapping = joblib.load('models/label_mapping.pkl')
 vectorizer = joblib.load('models/tfidf_vectorizer.pkl')
 
-# Flask + MongoDB setup
 app = Flask(__name__)
 app.secret_key = "supersecretkey"
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-client = MongoClient("mongodb+srv://<sathvik>:<dPx79QjaWGzejXdI>@petcluster.yy9ay.mongodb.net/?retryWrites=true&w=majority&appName=PetCluster")
+client = MongoClient("mongodb+srv://sathvik:dPx79QjaWGzejXdI@petcluster.yy9ay.mongodb.net/?retryWrites=true&w=majority&appName=PetCluster")
 db = client["expense"]
 transactions = db["transactions"]
 
 
-# Prediction function
 def predict_category(text):
     X = vectorizer.transform([text])
     y_pred = model.predict(X)
@@ -39,6 +40,9 @@ def login_required(f):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    if "username" not in session:
+        return redirect(url_for("login"))
+
     if request.method == "POST":
         description = request.form["description"]
         amount = float(request.form["amount"])
@@ -48,12 +52,14 @@ def index():
             "description": description,
             "amount": amount,
             "category": category,
-            "date": datetime.datetime.utcnow().date().isoformat()
+            "date": datetime.datetime.utcnow().date().isoformat(),
+            "user": session["username"]
         })
 
         return redirect(url_for("index"))
 
     return render_template("index.html")
+
 
 @app.route("/transactions")
 def all_transactions():
@@ -89,27 +95,38 @@ def category_summary():
 def login():
     if request.method == "POST":
         username = request.form["username"]
+        password = request.form["password"]
+
         user = db.users.find_one({"username": username})
-        if user:
+        if user and check_password_hash(user["password"], password):
             session["username"] = username
             return redirect(url_for("index"))
         else:
-            flash("User not found. Please sign up.")
-            return redirect(url_for("signup"))
+            flash("Invalid username or password.")
+            return redirect(url_for("login"))
+
     return render_template("login.html")
+
 
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
         username = request.form["username"]
+        password = request.form["password"]
+
         if db.users.find_one({"username": username}):
             flash("User already exists. Please log in.")
             return redirect(url_for("login"))
-        db.users.insert_one({"username": username})
+
+        hashed_pw = generate_password_hash(password)
+        db.users.insert_one({"username": username, "password": hashed_pw})
+
         flash("Signup successful. Please log in.")
         return redirect(url_for("login"))
+
     return render_template("signup.html")
+
 
 
 @app.route("/logout")
