@@ -124,7 +124,7 @@ SURNAMES = [
 DEITIES_PREFIXES = [
     "Shri", "Sri", "Shree", "Jai", "Mahalaxmi", "Ganesh", "Balaji", "Krishna",
     "Sai", "Hanuman", "Durga", "Maa", "Lakshmi", "Saraswati", "Vishnu",
-    "Shiv", "Ram", "Radha", "Om", "Mahadev", "Kali", "Parvati"
+    "Shiv", "Ram", "Radha", "Om", "Mahadev", "Kali", "Parvati
 ]
 
 CONCEPTS = [
@@ -204,10 +204,12 @@ def generate_description(pattern, merchant):
     elif "{}" in pattern: return pattern.format(*[fake.word() for _ in range(pattern.count("{}"))])
     else: return pattern
 
-START = datetime(2024, 6, 1)
+START = datetime(2022, 6, 1)
 END = datetime(2025, 6, 1)
 records = []
 tx_id = 1
+
+USER_POOL = 10000
 
 for category, num in counts.items():
     for _ in range(num):
@@ -243,7 +245,6 @@ for category, num in counts.items():
             "date_time": dt.strftime("%Y-%m-%d %H:%M:%S"),
             "city": random.choice(CITIES),
             "amount": amount,
-            "payment_method": random.choice(PAY_METHODS),
             "merchant": merchant,
             "description": desc.strip(),
             "category": category

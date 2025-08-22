@@ -12,7 +12,8 @@
     "DogSpot",
     "Just Dogs",
     "Zooplus",
-    "Local Pet Store"
+    "Local Pet Store",
+    "Amazon"
   ],
   "amount_range": [200, 10000]
 }

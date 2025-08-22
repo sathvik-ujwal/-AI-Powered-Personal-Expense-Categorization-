@@ -17,7 +17,7 @@
       ]
     },
     "Cosmetics": {
-      "merchants": ["Nykaa", "Health & Glow"],
+      "merchants": ["Nykaa", "Health & Glow", "Amazon", "Flipcart"],
       "amount_range": [300, 5000],
       "description_templates": [
         "Cosmetic products purchased from {merchant}",

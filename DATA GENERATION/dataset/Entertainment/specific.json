@@ -39,7 +39,7 @@
         "Attended event hosted by {merchant}",
         "Entry pass purchased at {merchant}"
       ],
-      "merchants": ["BookMyShow", "Paytm Insider", "Eventbrite"],
+      "merchants": ["BookMyShow", "Paytm Insider", "Eventbrite", "Jio", "Amazon"],
       "amount_range": [300, 8000]
     }
   }

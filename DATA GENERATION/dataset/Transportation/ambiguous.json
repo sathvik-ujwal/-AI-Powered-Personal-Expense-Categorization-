@@ -3,14 +3,35 @@
     "Paid {merchant} for ride",
     "Travel expense with {merchant} costing {amount}",
     "Fare paid to {merchant}",
-    "Transport charges: {merchant} {amount}"
+    "Transport charges: {merchant} {amount}",
+    "Metro ticket from {merchant}",
+    "Booked bus through {merchant}",
+    "Train ticket via {merchant}",
+    "Cab fare paid to {merchant}",
+    "Airport transfer with {merchant}",
+    "Trip expense handled by {merchant}"
   ],
   "merchants": [
     "Ola",
     "Uber",
     "Rapido",
     "Meru Cabs",
-    "RedBus"
+    "RedBus",
+    "MakeMyTrip",
+    "Yatra",
+    "IRCTC",
+    "GoAir",
+    "IndiGo Airlines",
+    "SpiceJet",
+    "Air India",
+    "Blue Dart Logistics",
+    "FedEx",
+    "Delhivery",
+    "VRL Travels",
+    "KSRTC",
+    "SRS Travels",
+    "Volvo Bus Service",
+    "Airport Taxi Services"
   ],
-  "amount_range": [100, 1500]
+  "amount_range": [100, 15000]
 }

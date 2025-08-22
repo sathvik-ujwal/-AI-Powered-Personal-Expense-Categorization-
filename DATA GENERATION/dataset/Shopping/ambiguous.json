@@ -1,14 +1,40 @@
 {
   "merchants": [
-    "Amazon", "Flipkart", "Myntra", "Reliance Trends", "Big Bazaar", 
-    "DMart", "Shoppers Stop", "Lifestyle", "Croma", "Tata Cliq"
+    "Amazon", "Flipkart", "Myntra", "Reliance Trends", "Big Bazaar",
+    "DMart", "Shoppers Stop", "Lifestyle", "Croma", "Tata Cliq",
+    "Blinkit", "Zepto", "Ajio", "Nykaa", "Health & Glow", "Nature's Basket",
+    "Big Basket", "1mg", "Apollo Pharmacy", "MedPlus", "Vishal Mega Mart",
+    "More Supermarket", "Spencer's", "Foodhall", "Lenskart", "Pepperfry",
+    "Urban Ladder", "FabIndia", "Biba", "Pantaloons", "Central", "Westside",
+    "Tanishq", "CaratLane", "Voylla", "Lifestyle Kirana Store", "Sai Kirana",
+    "Shree Ganesh General Store", "Radha Krishna Traders", "Mahalaxmi Provision",
+    "Royal Bazaar", "Smart Mart", "National Provisions", "Swadeshi Traders",
+    "Classic Super Market", "Golden Electronics", "Mega Toys", "Fresh Footwear",
+    "Supreme Sports", "Heritage Book Depot", "Premium Stationery", "Smart Cloth House",
+    "Modern Sweets", "Bharat Electronics", "Om Mobile Shop", "Shiv Furniture",
+    "Sri Jain Medical Store", "Ganesh Confectionery", "Lakshmi Bakery",
+    "Sai Sports", "Hanuman Toys", "Durga Cosmetics", "Maa Footwear", "Radha Saree Centre",
+    "Shree Krishna Bazaar", "Bose Provisions", "Dutta Electronics", "Pandey Super Market",
+    "Tripathi Cloth House", "Mishra Stationery", "Verma Jewelry", "Patel Confectionery",
+    "Mehta Bakery", "Shah Toys", "Gupta Sports", "Kumar Book Depot", "Reddy Mobile Shop",
+    "Iyer Furniture", "Menon Electronics", "Naidu Super Market", "Chopra Cloth House",
+    "Arora Saree Centre", "Bhatia General Store", "Saxena Kirana", "Kulkarni Mart",
+    "Joshi Bazaar", "Malhotra Footwear", "Kapoor Cosmetics", "Shetty Bakery",
+    "Tripathi Electronics", "Banerjee Sports", "Mukherjee Toys", "Chatterjee Book Depot",
+    "Bansal Provisions", "Goyal Super Market", "Verma Confectionery", "Patel Electronics",
+    "Kirana Hub", "General Store Online", "Fresh Mart", "Urban Bazaar", "Mega Mart Online",
+    "SuperMart Express", "QuickKart", "FastBasket", "ShopEasy", "ClickBasket"
   ],
-  "amount_range": [100, 1000000],
+  "amount_range": [50, 1000000],
   "description_templates": [
     "Purchase at {merchant}",
     "Shopping at {merchant}",
     "Payment to {merchant}",
     "Transaction with {merchant}",
-    "Order placed on {merchant}"
+    "Order placed on {merchant}",
+    "Amount paid to {merchant}",
+    "transferred to {merchant}",
+    "Money transferred to {merchant}",
+    "{amount} paid to {merchant}"
   ]
 }

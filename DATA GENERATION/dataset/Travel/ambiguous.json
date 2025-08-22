@@ -1,8 +1,9 @@
 {
   "merchants": [
     "MakeMyTrip", "Goibibo", "Cleartrip", "Expedia", "Yatra",
-    "IRCTC", "OYO Rooms", "Airbnb", "Indigo", "Air India",
-    "Vistara", "SpiceJet", "RedBus", "Ola", "Uber"
+    "IRCTC", "OYO Rooms", "Airbnb", "IndiGo", "Air India",
+    "Vistara", "SpiceJet", "RedBus", "Ola", "Uber",
+    "VRL Travels", "SRS Travels", "Volvo Bus Service", "Local Taxi Service"
   ],
   "amount_range": [100, 50000],
   "description_templates": [
@@ -13,6 +14,8 @@
     "Transaction at {merchant}",
     "Ticket purchase at {merchant}",
     "Travel service - {merchant}",
-    "Paid 1000 to {merchant}"
+    "Paid {amount} to {merchant}",
+    "Trip arranged through {merchant}",
+    "Journey booked via {merchant}"
   ]
 }

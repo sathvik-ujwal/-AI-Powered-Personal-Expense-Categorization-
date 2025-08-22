@@ -1,18 +1,20 @@
 {
+  "merchants": [
+    "Apollo Hospitals", "Fortis Healthcare", "MedPlus Pharmacy", "Apollo Pharmacy",
+    "Cloudnine", "Practo", "Local Clinic", "Max Healthcare", "Care Hospitals",
+    "Manipal Hospitals", "Columbia Asia", "VLCC Healthcare", "1mg Pharmacy",
+    "Local Nursing Home", "Sparsh Hospital", "HCG Cancer Centre", "AIIMS",
+    "Dr. Lal PathLabs", "SRL Diagnostics"
+  ],
+  "amount_range": [300, 20000],
   "description_templates": [
     "Visited {merchant} for a check-up",
     "Medical services at {merchant}",
     "Paid {amount} for treatment at {merchant}",
-    "Purchased medicines from {merchant}"
-  ],
-  "merchants": [
-    "Apollo Hospitals",
-    "Fortis Healthcare",
-    "MedPlus Pharmacy",
-    "Apollo Pharmacy",
-    "Cloudnine",
-    "Practo",
-    "Local Clinic"
-  ],
-  "amount_range": [300, 20000]
+    "Purchased medicines from {merchant}",
+    "Consultation at {merchant}",
+    "Health check-up via {merchant}",
+    "Medical procedure done at {merchant}",
+    "Paid {amount} to {merchant} for tests"
+  ]
 }

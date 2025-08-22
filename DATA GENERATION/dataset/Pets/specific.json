@@ -1,7 +1,7 @@
 {
   "items": {
     "Pet Food": {
-      "merchants": ["PetSmart", "Petco", "Heads Up For Tails", "Just Dogs"],
+      "merchants": ["PetSmart", "Petco", "Heads Up For Tails", "Just Dogs", "Radha Medicals", "Amazon"],
       "amount_range": [500, 5000],
       "description_templates": [
         "Bought pet food from {merchant}",
@@ -27,7 +27,7 @@
       ]
     },
     "Accessories": {
-      "merchants": ["Zooplus", "DogSpot", "PetSmart"],
+      "merchants": ["Zooplus", "DogSpot", "PetSmart", "Amazon", "Flipcart"],
       "amount_range": [300, 4000],
       "description_templates": [
         "Bought pet accessories from {merchant}",

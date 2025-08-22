@@ -17,7 +17,7 @@
       ]
     },
     "Tuition Classes": {
-      "merchants": ["EuroKids", "Kangaroo Kids"],
+      "merchants": ["EuroKids", "Kangaroo Kids "],
       "amount_range": [1000, 5000],
       "description_templates": [
         "Enrolled in tuition classes at {merchant}",
@@ -25,7 +25,7 @@
       ]
     },
     "Kids’ Supplies": {
-      "merchants": ["FirstCry", "Hopscotch", "ToyCart"],
+      "merchants": ["FirstCry", "Hopscotch", "ToyCart", "Amazon", "Flipcart", "D-Mart"],
       "amount_range": [300, 4000],
       "description_templates": [
         "Purchased kids’ supplies from {merchant}",

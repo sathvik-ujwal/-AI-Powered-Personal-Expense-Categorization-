@@ -1,0 +1,70 @@
+{
+  "items": {
+    "groceries": {
+      "merchants": ["Big Bazaar", "DMart", "Reliance Fresh", "More Supermarket", "Spencer's Retail", "Star Bazaar"],
+      "amount_range": [200, 5000],
+      "description_templates": [
+        "Purchased {item} from {merchant}",
+        "Bought daily essentials at {merchant}",
+        "Shopping for {item} at {merchant}",
+        "Groceries purchased from {merchant}",
+        "Household items bought at {merchant}"
+      ]
+    },
+    "electronics": {
+      "merchants": ["Croma", "Reliance Digital", "Vijay Sales", "Flipkart", "Amazon", "Tata Cliq"],
+      "amount_range": [2000, 150000],
+      "description_templates": [
+        "Bought {item} from {merchant}",
+        "Purchased electronics at {merchant}",
+        "Payment for {item} at {merchant}",
+        "Order for {item} placed at {merchant}",
+        "Electronics shopping at {merchant}"
+      ]
+    },
+    "footwear": {
+      "merchants": ["Bata", "Metro Shoes", "Woodland", "Nike", "Adidas", "Puma"],
+      "amount_range": [500, 10000],
+      "description_templates": [
+        "Purchased {item} at {merchant}",
+        "Bought new shoes from {merchant}",
+        "Footwear shopping at {merchant}",
+        "Order for {item} placed at {merchant}",
+        "Payment for footwear at {merchant}"
+      ]
+    },
+    "cars": {
+      "merchants": ["Tata Motors", "Honda Motors", "Hyundai", "Maruti Suzuki", "Mahindra", "Kia Motors"],
+      "amount_range": [300000, 2500000],
+      "description_templates": [
+        "Purchased {item} from {merchant}",
+        "Booking payment for {item} at {merchant}",
+        "Car purchase from {merchant}",
+        "Down payment for {item} at {merchant}",
+        "Order placed for {item} at {merchant}"
+      ]
+    },
+    "bikes": {
+      "merchants": ["Hero MotoCorp", "Bajaj", "TVS", "Royal Enfield", "Honda Motors", "Yamaha"],
+      "amount_range": [60000, 300000],
+      "description_templates": [
+        "Purchased {item} from {merchant}",
+        "Booking payment for {item} at {merchant}",
+        "Bike purchase from {merchant}",
+        "Down payment for {item} at {merchant}",
+        "Order placed for {item} at {merchant}"
+      ]
+    },
+    "clothes": {
+      "merchants": ["Myntra", "Shoppers Stop", "Lifestyle", "Pantaloons", "H&M", "Zara"],
+      "amount_range": [500, 20000],
+      "description_templates": [
+        "Purchased {item} from {merchant}",
+        "Clothing shopping at {merchant}",
+        "Bought new clothes at {merchant}",
+        "Order for {item} placed at {merchant}",
+        "Payment for clothes at {merchant}"
+      ]
+    }
+  }
+}

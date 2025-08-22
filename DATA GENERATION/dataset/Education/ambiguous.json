@@ -3,7 +3,13 @@
     "Paid {amount} for {merchant} subscription",
     "Enrolled for a course at {merchant}",
     "Learning expense with {merchant}",
-    "Registered at {merchant} for classes"
+    "Registered at {merchant} for classes",
+    "Purchased educational material from {merchant}",
+    "Bought books and study material from {merchant}",
+    "Payment to {merchant}",
+    "Payed to {merchant}",
+    "paid {amount} to {merchant}"
+
   ],
   "merchants": [
     "BYJU'S",
@@ -11,7 +17,16 @@
     "Coursera",
     "Udemy",
     "edX",
-    "Skillshare"
+    "Skillshare",
+    "Amazon",
+    "Flipkart",
+    "BookMyShow (Educational events)",
+    "Scholastic",
+    "Cambridge University Press",
+    "Oxford University Press",
+    "Local Bookstore",
+    "National Book Depot",
+    "Sapna Book House"
   ],
   "amount_range": [500, 20000]
 }

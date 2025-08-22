@@ -3,7 +3,8 @@
     "Paid electricity bill via {merchant}",
     "Recharged mobile connection using {merchant}",
     "Utility bill payment through {merchant}",
-    "Paid {amount} for water bill via {merchant}"
+    "Paid {amount} for water bill via {merchant}",
+    "Payment through {merchant}"
   ],
   "merchants": [
     "Airtel Payments Bank",

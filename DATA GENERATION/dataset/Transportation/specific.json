@@ -31,7 +31,8 @@
       "description_templates": [
         "Train ticket booked with {merchant} for {amount}",
         "Rail travel using {merchant}",
-        "Paid {amount} for train journey with {merchant}"
+        "Paid {amount} for train journey with {merchant}",
+        "Train ticket"
       ],
       "merchants": ["IRCTC", "South Western Railway", "Southern Railway"],
       "amount_range": [200, 2500]
