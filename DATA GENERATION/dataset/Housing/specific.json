@@ -1,0 +1,36 @@
+{
+  "items": {
+    "Rent": {
+      "merchants": ["Local Landlord", "NestAway", "NoBroker", "Housing.com"],
+      "amount_range": [8000, 30000],
+      "description_templates": [
+        "Monthly rent paid to {merchant}",
+        "Apartment rent cleared via {merchant}"
+      ]
+    },
+    "Maintenance": {
+      "merchants": ["Society Office", "Apartment Association"],
+      "amount_range": [1000, 5000],
+      "description_templates": [
+        "Maintenance fees paid at {merchant}",
+        "Society maintenance charges at {merchant}"
+      ]
+    },
+    "Repairs": {
+      "merchants": ["Home Repair Services", "MagicBricks"],
+      "amount_range": [500, 10000],
+      "description_templates": [
+        "Home repair services availed from {merchant}",
+        "Paid {amount} for repair work at {merchant}"
+      ]
+    },
+    "Furnishing": {
+      "merchants": ["IKEA", "Pepperfry", "Urban Ladder"],
+      "amount_range": [2000, 20000],
+      "description_templates": [
+        "Furniture purchased from {merchant}",
+        "Home furnishing items bought at {merchant}"
+      ]
+    }
+  }
+}

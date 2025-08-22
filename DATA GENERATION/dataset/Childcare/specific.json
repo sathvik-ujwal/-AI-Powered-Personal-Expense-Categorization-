@@ -1,0 +1,36 @@
+{
+  "items": {
+    "Daycare": {
+      "merchants": ["Bright Kids Daycare", "EuroKids", "Kidzee", "Little Millennium"],
+      "amount_range": [2000, 8000],
+      "description_templates": [
+        "Daycare services paid at {merchant}",
+        "Full-day childcare provided by {merchant}"
+      ]
+    },
+    "Babysitting": {
+      "merchants": ["Local Babysitter", "Community Childcare Center"],
+      "amount_range": [500, 3000],
+      "description_templates": [
+        "Babysitting charges for {merchant}",
+        "Evening care arranged through {merchant}"
+      ]
+    },
+    "Tuition Classes": {
+      "merchants": ["EuroKids", "Kangaroo Kids"],
+      "amount_range": [1000, 5000],
+      "description_templates": [
+        "Enrolled in tuition classes at {merchant}",
+        "Paid {amount} for extra classes with {merchant}"
+      ]
+    },
+    "Kids’ Supplies": {
+      "merchants": ["FirstCry", "Hopscotch", "ToyCart"],
+      "amount_range": [300, 4000],
+      "description_templates": [
+        "Purchased kids’ supplies from {merchant}",
+        "Toys and learning materials bought at {merchant}"
+      ]
+    }
+  }
+}

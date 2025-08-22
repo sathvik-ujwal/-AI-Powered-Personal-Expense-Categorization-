@@ -1,0 +1,20 @@
+{
+  "description_templates": [
+    "Insurance premium paid via {merchant}",
+    "Policy renewal done at {merchant}",
+    "Payment made for insurance through {merchant}",
+    "Paid {amount} towards insurance premium with {merchant}"
+  ],
+  "merchants": [
+    "LIC",
+    "HDFC Life",
+    "ICICI Lombard",
+    "SBI Life",
+    "Max Bupa",
+    "Bajaj Allianz",
+    "Tata AIG",
+    "Reliance General Insurance",
+    "New India Assurance"
+  ],
+  "amount_range": [1000, 25000]
+}

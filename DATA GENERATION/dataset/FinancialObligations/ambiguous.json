@@ -1,0 +1,19 @@
+{
+  "description_templates": [
+    "Payment made to {merchant}",
+    "Paid dues at {merchant}",
+    "Cleared pending amount for {merchant}",
+    "Transferred funds to {merchant}",
+    "Obligation settled at {merchant}"
+  ],
+  "merchants": [
+    "HDFC Bank",
+    "ICICI Bank",
+    "SBI",
+    "Axis Bank",
+    "Kotak Mahindra",
+    "Bajaj Finserv",
+    "IDFC First Bank"
+  ],
+  "amount_range": [500, 50000]
+}

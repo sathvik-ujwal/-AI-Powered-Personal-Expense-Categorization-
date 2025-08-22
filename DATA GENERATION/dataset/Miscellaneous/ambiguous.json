@@ -1,0 +1,42 @@
+{
+  "description_templates": [
+    "Paid to {name}",
+    "Transferred money to {name}",
+    "Sent {amount} to {name}",
+    "UPI transfer to {name}",
+    "Bank payment made to {name}",
+    "Paid cash to {name}",
+    "Online payment sent to {name}",
+    "Settled dues with {name}",
+    "Money given to {name}",
+    "Transferred {amount} via UPI to {name}"
+  ],
+  "names": [
+    "Aarav", "Vivaan", "Aditya", "Vihaan", "Arjun", "Sai", "Reyansh", "Krishna", "Ishaan", "Shaurya",
+    "Atharv", "Ayaan", "Dhruv", "Kabir", "Ritvik", "Kian", "Manav", "Harsh", "Siddharth", "Dev",
+    "Om", "Rohan", "Aryan", "Tanmay", "Yuvraj", "Parth", "Varun", "Abhinav", "Tejas", "Chirag",
+    "Rakesh", "Aniket", "Pranav", "Madhav", "Ansh", "Tushar", "Kunal", "Rajat", "Sarthak", "Uday",
+    "Sagar", "Vikram", "Arnav", "Rishi", "Adarsh", "Nikhil", "Hrithik", "Sameer", "Ravindra", "Lakshya",
+    "Karthik", "Ashwin", "Bharat", "Naveen", "Anirudh", "Ramesh", "Sudhir", "Suresh", "Vineet", "Alok",
+    "Ajay", "Vikas", "Rajeev", "Ravi", "Shivam", "Tarun", "Nitin", "Suraj", "Mohit", "Chetan",
+    "Mohan", "Raghav", "Sanjay", "Amar", "Balaji", "Rakesh", "Yash", "Shaan", "Keshav", "Deepak",
+    "Akhil", "Harish", "Rajesh", "Lalit", "Satish", "Vijay", "Gopal", "Prem", "Dinesh", "Naresh",
+    "Anjali", "Priya", "Divya", "Sneha", "Kavita", "Neha", "Ritika", "Shreya", "Aishwarya", "Sonia",
+    "Pooja", "Simran", "Nisha", "Swati", "Komal", "Meera", "Rekha", "Rani", "Geeta", "Sakshi",
+    "Kiran", "Alka", "Seema", "Pinky", "Sonali", "Archana", "Manisha", "Suman", "Madhuri", "Chhavi",
+    "Nandita", "Juhi", "Sushma", "Kalpana", "Trupti", "Damini", "Sunita", "Anita", "Bhavna", "Isha",
+    "Tanvi", "Rupal", "Gauri", "Jaya", "Kajal", "Monica", "Ananya", "Tanya", "Lavanya", "Rajni",
+    "Usha", "Vidya", "Savitri", "Pallavi", "Radhika", "Ekta", "Sangeeta", "Payal", "Shalini", "Farida",
+    "Aarush", "Bhuvan", "Charith", "Deepak", "Eshita", "Falguni", "Gargee", "Harini", "Ishika", "Jaya",
+    "Kavya", "Lavanya", "Megha", "Niharika", "Oindrila", "Prisha", "Ritu", "Sneha", "Tanvi", "Urvashi",
+    "Vaishnavi", "Yamini", "Zoya", "Amrita", "Bhavana", "Chitra", "Divya", "Esha", "Farida", "Geetika",
+    "Heena", "Ipsita", "Juhi", "Komal", "Lata", "Manisha", "Nandini", "Oviya", "Pallavi", "Radhika",
+    "Shalini", "Trisha", "Usha", "Vidya", "Wamika", "Yashika", "Zeenat", "Aditi", "Brinda", "Chandana",
+    "Damini", "Ekta", "Freya", "Gayatri", "Hema", "Indira", "Jhanvi", "Kriti", "Leela", "Mridula",
+    "Navya", "Oorja", "Pragya", "Rekha", "Sonali", "Tanuja", "Uma", "Vandana", "Warda", "Yami", "Zarina",
+    "Ananya", "Bhairavi", "Chandrika", "Darshana", "Elina", "Farheen", "Gargi", "Hiral", "Iqra", "Jyoti",
+    "Kiran", "Laxmi", "Medha", "Nisha", "Padma", "Rajni", "Savita", "Tulsi", "Urmi", "Varsha", "Wasima",
+    "Yogita", "Zulekha", "Aparna", "Binita", "Chhavi", "Devika", "Esita", "Farnaz", "Gulnaaz", "Hina"
+  ],
+  "amount_range": [100, 20000]
+}

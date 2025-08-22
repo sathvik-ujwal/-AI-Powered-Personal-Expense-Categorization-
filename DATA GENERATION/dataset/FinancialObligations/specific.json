@@ -1,0 +1,56 @@
+{
+  "items": {
+    "Loan EMI": {
+      "description_templates": [
+        "Paid loan EMI to {merchant}",
+        "Transferred {amount} for {merchant} loan payment"
+      ],
+      "merchants": [
+        "HDFC Bank",
+        "ICICI Bank",
+        "SBI",
+        "Axis Bank"
+      ],
+      "amount_range": [2000, 60000]
+    },
+    "Credit Card Bill": {
+      "description_templates": [
+        "Credit card bill payment to {merchant}",
+        "Cleared dues at {merchant}"
+      ],
+      "merchants": [
+        "HDFC Credit Card",
+        "ICICI Credit Card",
+        "SBI Card",
+        "Axis Bank Card"
+      ],
+      "amount_range": [1000, 100000]
+    },
+    "Mortgage Payment": {
+      "description_templates": [
+        "Mortgage installment paid to {merchant}",
+        "Transferred funds for housing loan at {merchant}"
+      ],
+      "merchants": [
+        "HDFC Home Loans",
+        "LIC Housing Finance",
+        "SBI Home Loan",
+        "PNB Housing"
+      ],
+      "amount_range": [10000, 200000]
+    },
+    "Utility Bills": {
+      "description_templates": [
+        "Paid electricity bill at {merchant}",
+        "Water bill payment made to {merchant}"
+      ],
+      "merchants": [
+        "BESCOM",
+        "Tata Power",
+        "Adani Electricity",
+        "Delhi Jal Board"
+      ],
+      "amount_range": [500, 20000]
+    }
+  }
+}

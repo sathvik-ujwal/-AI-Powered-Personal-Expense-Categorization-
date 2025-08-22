@@ -1,0 +1,19 @@
+{
+  "description_templates": [
+    "Daycare services at {merchant}",
+    "Babysitting arranged through {merchant}",
+    "After-school care provided by {merchant}",
+    "Paid {amount} for childcare at {merchant}"
+  ],
+  "merchants": [
+    "Bright Kids Daycare",
+    "EuroKids",
+    "Kangaroo Kids",
+    "Kidzee",
+    "Little Millennium",
+    "Sunshine Preschool",
+    "Local Babysitter",
+    "Community Childcare Center"
+  ],
+  "amount_range": [500, 8000]
+}

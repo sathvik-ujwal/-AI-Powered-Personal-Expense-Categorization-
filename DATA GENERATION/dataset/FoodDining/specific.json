@@ -1,0 +1,37 @@
+{
+  "items": {
+    "Restaurant": {
+      "merchants": ["Barbeque Nation", "KFC", "McDonald's", "Local Restaurant"],
+      "amount_range": [500, 4000],
+      "description_templates": [
+        "Dinner with family at {merchant}",
+        "Casual dining at {merchant}",
+        "Paid {amount} for meal at {merchant}"
+      ]
+    },
+    "Cafe": {
+      "merchants": ["Starbucks", "Cafe Coffee Day", "Local Cafe"],
+      "amount_range": [150, 1500],
+      "description_templates": [
+        "Coffee and snacks at {merchant}",
+        "Relaxed at {merchant} cafe"
+      ]
+    },
+    "Delivery": {
+      "merchants": ["Swiggy", "Zomato", "Domino's"],
+      "amount_range": [200, 2500],
+      "description_templates": [
+        "Ordered online from {merchant}",
+        "Food delivery through {merchant}"
+      ]
+    },
+    "Fast Food": {
+      "merchants": ["KFC", "McDonald's", "Domino's"],
+      "amount_range": [200, 1200],
+      "description_templates": [
+        "Quick meal at {merchant}",
+        "Fast food order from {merchant}"
+      ]
+    }
+  }
+}

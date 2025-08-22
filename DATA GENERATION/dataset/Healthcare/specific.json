@@ -1,0 +1,37 @@
+{
+  "items": {
+    "Hospital": {
+      "merchants": ["Apollo Hospitals", "Fortis Healthcare", "Cloudnine"],
+      "amount_range": [2000, 20000],
+      "description_templates": [
+        "Consultation at {merchant}",
+        "Admitted for treatment at {merchant}",
+        "Paid {amount} for hospital services at {merchant}"
+      ]
+    },
+    "Pharmacy": {
+      "merchants": ["MedPlus Pharmacy", "Apollo Pharmacy", "Local Pharmacy"],
+      "amount_range": [200, 3000],
+      "description_templates": [
+        "Bought medicines from {merchant}",
+        "Prescription filled at {merchant}"
+      ]
+    },
+    "Online Consultation": {
+      "merchants": ["Practo", "Apollo 24/7"],
+      "amount_range": [300, 1500],
+      "description_templates": [
+        "Booked online consultation via {merchant}",
+        "Video consultation on {merchant}"
+      ]
+    },
+    "Clinic": {
+      "merchants": ["Local Clinic"],
+      "amount_range": [500, 5000],
+      "description_templates": [
+        "General check-up at {merchant}",
+        "Routine visit to {merchant}"
+      ]
+    }
+  }
+}

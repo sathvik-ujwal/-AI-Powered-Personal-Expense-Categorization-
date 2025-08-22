@@ -1,0 +1,18 @@
+{
+  "description_templates": [
+    "Visited {merchant} for a check-up",
+    "Medical services at {merchant}",
+    "Paid {amount} for treatment at {merchant}",
+    "Purchased medicines from {merchant}"
+  ],
+  "merchants": [
+    "Apollo Hospitals",
+    "Fortis Healthcare",
+    "MedPlus Pharmacy",
+    "Apollo Pharmacy",
+    "Cloudnine",
+    "Practo",
+    "Local Clinic"
+  ],
+  "amount_range": [300, 20000]
+}

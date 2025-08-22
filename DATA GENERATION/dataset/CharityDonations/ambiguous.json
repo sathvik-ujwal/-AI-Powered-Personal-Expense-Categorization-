@@ -1,0 +1,18 @@
+{
+  "description_templates": [
+    "Donation made at {merchant}",
+    "Paid to {merchant}",
+    "Contribution towards {merchant}",
+    "Transferred funds to {merchant}",
+    "Support given to {merchant}"
+  ],
+  "merchants": [
+    "NGO Trust",
+    "Charity Fund",
+    "Relief Foundation",
+    "Help Hands",
+    "Goodwill Society",
+    "Community Aid"
+  ],
+  "amount_range": [100, 20000]
+}

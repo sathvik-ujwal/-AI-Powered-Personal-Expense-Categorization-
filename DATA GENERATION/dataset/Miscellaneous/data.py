@@ -1,0 +1,11 @@
+import json
+import os
+
+base_dir = os.path.dirname(__file__)
+
+with open(os.path.join(base_dir, "ambiguous.json"), "r") as f:
+    ambiguous = json.load(f)
+
+data = {
+    "ambiguous": ambiguous
+}

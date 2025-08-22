@@ -2,16 +2,24 @@ from faker import Faker
 import pandas as pd
 import random
 from datetime import datetime, timedelta
+import json
+
 
 # --- Basic Setup ---
 fake = Faker('en_IN')
 fake.seed_instance(42)
 random.seed(42)
 
-TOTAL_RECORDS = 100000
-USER_POOL = 10000
-CITIES = ["Mumbai", "Delhi", "Bengaluru", "Chennai", "Kolkata", "Pune", "Ahmedabad",
-          "Jaipur", "Lucknow", "Surat", "Hyderabad", "Bhopal", "Indore", "Chandigarh", "Thiruvanvananthapuram"]
+TOTAL_RECORDS = 105,000
+CITIES = [
+    "Mumbai", "Delhi", "Bengaluru", "Chennai", "Kolkata", "Pune", "Ahmedabad", "Jaipur",
+    "Lucknow", "Surat", "Hyderabad", "Bhopal", "Indore", "Chandigarh", "Thiruvananthapuram",
+    "Nagpur", "Patna", "Vadodara", "Visakhapatnam", "Kanpur", "Ludhiana", "Agra", "Varanasi",
+    "Rajkot", "Ranchi", "Coimbatore", "Guwahati", "Kochi", "Mysuru", "Noida", "Gurgaon",
+    "Faridabad", "Ghaziabad", "Jodhpur", "Amritsar", "Allahabad (Prayagraj)", "Aurangabad",
+    "Madurai", "Jamshedpur", "Dehradun", "Shillong"
+]
+
 PAY_METHODS = ["UPI", "NetBanking", "Credit Card", "Debit Card", "Mobile Wallet", "Cash", "Cheque"]
 
 CATEGORY_WEIGHTS = {
@@ -23,27 +31,116 @@ CATEGORY_WEIGHTS = {
 
 
 MERCHANT_POOLS = {
-    "Shopping": ["Amazon", "Flipkart", "Myntra", "Big Bazaar", "Reliance Digital", "Croma", "Zara", "H&M"],
-    "Food & Dining": ["Zomato", "Swiggy", "McDonald's", "Domino's Pizza", "Starbucks", "Haldiram's", "Bikanervala"],
-    "Transportation": ["Ola", "Uber", "Meru Cabs", "Delhi Metro", "Mumbai Metro", "Indian Railways"],
-    "Travel": ["MakeMyTrip", "Goibibo", "Indigo Airlines", "Air India", "Taj Hotels", "Marriott"],
-    "Bills & Utilities": ["BSES", "Tata Power", "Airtel", "Jio", "Vodafone Idea", "Mahanagar Gas"],
-    "Entertainment": ["PVR Cinemas", "INOX", "BookMyShow", "Netflix", "Spotify", "Hotstar"],
-    "Healthcare": ["Apollo Pharmacy", "Fortis Hospital", "Dr. Lal PathLabs", "Practo", "1mg"],
-    "Housing": ["DLF", "Lodha Group", "Godrej Properties", "Sobha Ltd"],
-    "Generic": ["Reliance Retail", "Tata Group", "Paytm", "PhonePe", "Google Pay"]
+    "Shopping": [
+        "Amazon", "Flipkart", "Myntra", "Big Bazaar", "Reliance Digital", "Croma", "Zara", "H&M",
+        "Lifestyle", "Pantaloons", "Shoppers Stop", "Nykaa", "Ajio", "Snapdeal", "Tata Cliq",
+        "Decathlon", "Pepperfry", "IKEA", "Home Centre", "FirstCry", "Meesho", "Max Fashion",
+        "Westside", "FabIndia", "Reliance Trends"
+    ],
+    "Food & Dining": [
+        "Zomato", "Swiggy", "McDonald's", "Domino's Pizza", "Starbucks", "Haldiram's", "Bikanervala",
+        "KFC", "Subway", "Burger King", "Pizza Hut", "Barbeque Nation", "Mainland China",
+        "Cafe Coffee Day", "Theobroma", "Chaayos", "Behrouz Biryani", "Faasos", "Box8", "FreshMenu"
+    ],
+    "Transportation": [
+        "Ola", "Uber", "Meru Cabs", "Rapido", "Delhi Metro", "Mumbai Metro", "Hyderabad Metro",
+        "Bangalore Metro", "Indian Railways", "IRCTC", "RedBus", "KSRTC", "VRL Travels",
+        "Indigo Cabs", "BlaBlaCar", "SRS Travels", "TNSTC", "MSRTC", "Uber Auto", "Ola Electric"
+    ],
+    "Bills & Utilities": [
+        "BSES", "Tata Power", "Airtel", "Jio", "Vodafone Idea", "Mahanagar Gas", "BSNL",
+        "ACT Fibernet", "Hathway", "Reliance Energy", "DishTV", "Sun Direct", "Tata Sky",
+        "Den Broadband", "You Broadband"
+    ],
+    "Travel": [
+        "MakeMyTrip", "Goibibo", "Indigo Airlines", "Air India", "Vistara", "SpiceJet", "Akasa Air",
+        "Cleartrip", "Yatra", "Expedia", "OYO Rooms", "Treebo Hotels", "FabHotels", "Airbnb",
+        "Taj Hotels", "Marriott", "Hyatt", "ITC Hotels", "HolidayIQ", "Club Mahindra"
+    ],
+    "Entertainment": [
+        "PVR Cinemas", "INOX", "BookMyShow", "Netflix", "Spotify", "Hotstar", "Sony LIV",
+        "Amazon Prime Video", "Apple Music", "Gaana", "Wynk Music", "ALTBalaji", "Zee5",
+        "Voot", "MX Player", "JioSaavn", "Sun NXT", "Hungama Music"
+    ],
+    "Healthcare": [
+        "Apollo Pharmacy", "Fortis Hospital", "Dr. Lal PathLabs", "Practo", "1mg", "MedPlus",
+        "NetMeds", "PharmEasy", "AIIMS", "Max Healthcare", "Narayana Health", "Manipal Hospitals",
+        "Columbia Asia", "Cloudnine", "Medanta"
+    ],
+    "Housing": [
+        "DLF", "Lodha Group", "Godrej Properties", "Sobha Ltd", "Prestige Group", "Brigade Group",
+        "Puravankara", "Oberoi Realty", "Raheja Developers", "Embassy Group"
+    ],
+    "Personal Care": [
+        "Nykaa", "Mamaearth", "Beardo", "The Man Company", "Sugar Cosmetics", "Lakme",
+        "Forest Essentials", "WOW Skin Science", "Plum Goodness", "MCaffeine"
+    ],
+    "Insurance": [
+        "LIC", "ICICI Lombard", "HDFC Ergo", "SBI Life Insurance", "Bajaj Allianz", "Max Bupa",
+        "Religare Health Insurance", "New India Assurance", "Oriental Insurance", "Star Health"
+    ],
+    "Education": [
+        "Byju's", "Unacademy", "Vedantu", "Toppr", "Simplilearn", "Coursera", "Udemy",
+        "edX", "UpGrad", "Khan Academy"
+    ],
+    "Financial Obligations": [
+        "HDFC Bank Loan", "SBI Loan", "ICICI Bank Loan", "Axis Bank Loan", "Bajaj Finserv EMI",
+        "Home Credit India", "Paytm Postpaid", "CASHe", "MoneyTap", "KreditBee"
+    ],
+    "Miscellaneous": [
+        "Amazon Pay", "Paytm Wallet", "PhonePe Wallet", "Google Pay Wallet", "Gift Cards",
+        "Sodexo", "Qwikcilver", "Freecharge", "Mobikwik", "PayZapp"
+    ],
+    "Taxes": [
+        "Income Tax Dept.", "GST Portal", "Municipal Corporation Tax", "Property Tax",
+        "Professional Tax", "MCA Portal", "EPFO Contributions", "NPS", "Customs Duty", "RBI Penalties"
+    ],
+    "Charity/Donations": [
+        "GiveIndia", "CRY", "Akshaya Patra", "Smile Foundation", "HelpAge India", "Oxfam India",
+        "Goonj", "Teach for India"
+    ],
+    "Pets": [
+        "Heads Up For Tails", "PetSutra", "Dogspot", "Pawfect", "Petsworld", "Supertails"
+    ],
+    "Childcare": [
+        "FirstCry", "Mothercare", "Babyhug", "Mee Mee", "Chicco", "Johnson's Baby"
+    ],
+    "Generic": [
+        "Reliance Retail", "Tata Group", "Paytm", "PhonePe", "Google Pay", "Amazon Pay",
+        "Flipkart Pay Later", "Mobikwik", "Freecharge", "BHIM UPI"
+    ]
 }
+
 
 SURNAMES = [
     "Agarwal", "Gupta", "Sharma", "Verma", "Singh", "Yadav", "Patel", "Shah",
-    "Jain", "Mehta", "Bansal", "Goyal", "Kumar", "Choudhary", "Rastogi"
+    "Jain", "Mehta", "Bansal", "Goyal", "Kumar", "Choudhary", "Rastogi",
+    "Reddy", "Naidu", "Pillai", "Menon", "Iyer", "Iyengar", "Shetty", "Pai",
+    "Deshmukh", "Kulkarni", "Joshi", "Chopra", "Malhotra", "Kapoor", "Bhatia",
+    "Arora", "Saxena", "Srivastava", "Mishra", "Pandey", "Tiwari", "Tripathi",
+    "Banerjee", "Mukherjee", "Chatterjee", "Bose", "Dutta"
 ]
-DEITIES_PREFIXES = ["Shri", "Sri", "Shree", "Jai", "Mahalaxmi", "Ganesh", "Balaji", "Krishna"]
-CONCEPTS = ["National", "New", "Modern", "Swadeshi", "Royal", "Bharat", "Quality", "Unique"]
+
+DEITIES_PREFIXES = [
+    "Shri", "Sri", "Shree", "Jai", "Mahalaxmi", "Ganesh", "Balaji", "Krishna",
+    "Sai", "Hanuman", "Durga", "Maa", "Lakshmi", "Saraswati", "Vishnu",
+    "Shiv", "Ram", "Radha", "Om", "Mahadev", "Kali", "Parvati"
+]
+
+CONCEPTS = [
+    "National", "New", "Modern", "Swadeshi", "Royal", "Bharat", "Quality", "Unique",
+    "Classic", "Heritage", "Golden", "Premium", "Super", "Mega", 
+    "Fresh", "Supreme",  "Smart"
+]
+
 STORE_TYPES = [
     "Kirana Store", "General Store", "Sweets", "Medical Store", "Electronics",
-    "Traders", "Enterprises", "Saree Centre", "Super Market", "Bazaar", "Mart"
+    "Traders", "Enterprises", "Saree Centre", "Super Market", "Bazaar", "Mart",
+    "Jewellers", "Stationery", "Cloth House", "Footwear", "Bakery",
+    "Furniture", "Mobile Shop", "Provisions", "Toys", "Sports", "Book Depot",
+    "Cosmetics", "Confectionery", "Steel Traders", "Glass House"
 ]
+
 
 def generate_indian_store_name():
     """Generates a realistic-sounding Indian store name using various patterns."""
@@ -54,15 +151,14 @@ def generate_indian_store_name():
         return f"{random.choice(DEITIES_PREFIXES)} {random.choice(SURNAMES)} {random.choice(STORE_TYPES)}"
     elif pattern == 3:
         return f"{random.choice(CONCEPTS)} {random.choice(STORE_TYPES)}"
-    else:
-        company_base = fake.company().split(' ')[0].replace(',', '')
-        return f"{company_base} {random.choice(STORE_TYPES)}"
+   
 
 NOISE_ELEMENTS = [
     lambda: f"TXN:{fake.random_number(digits=8)}",
     lambda: f"REF:{fake.lexify(text='????????').upper()}",
     lambda: f"UPI/{fake.random_int(1000,9999)}/", "via BillDesk", "via Razorpay",
 ]
+
 AMBIGUOUS_PATTERNS = [
     "Payment to {}", "Charge from {}", "Fee for {}", "Subscription to {}", "Monthly payment",
     "Transfer to {}", "Purchase at {}", "Service fee from {}", "Unknown transaction", "Expense for {}",
@@ -133,9 +229,9 @@ for category, num in counts.items():
             desc = generate_description(pattern, merchant)
       
 
-        if random.random() < 0.30:
-            noise = random.choice(NOISE_ELEMENTS)
-            desc = f"{desc} {noise() if callable(noise) else noise}"
+        #if random.random() < 0.30:
+        #    noise = random.choice(NOISE_ELEMENTS)
+        #    desc = f"{desc} {noise() if callable(noise) else noise}"
 
         dt = random_datetime(START, END)
         low, high = AMNT_RANGE.get(category, (100, 10000))
@@ -161,4 +257,4 @@ df.to_csv('transactions_final_complex.csv', index=False)
 
 print("Complex dataset generated successfully!")
 print("\n--- Sample of Generated Data ---")
-print(df.head(10))
+print(df.head(30))

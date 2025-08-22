@@ -1,0 +1,57 @@
+{
+  "items": {
+    "Religious Donation": {
+      "description_templates": [
+        "Donation made at {merchant} temple",
+        "Contributed to {merchant}",
+        "Paid {amount} towards {merchant} seva"
+      ],
+      "merchants": [
+        "ISKCON",
+        "Tirumala Tirupati Devasthanam",
+        "Golden Temple Trust",
+        "Shirdi Sai Sansthan"
+      ],
+      "amount_range": [500, 25000]
+    },
+    "Animal Welfare": {
+      "description_templates": [
+        "Donation made to {merchant} for animal care",
+        "Contributed to {merchant}"
+      ],
+      "merchants": [
+        "PETA India",
+        "Blue Cross",
+        "People for Animals",
+        "Animal Aid Unlimited"
+      ],
+      "amount_range": [200, 10000]
+    },
+    "Education Support": {
+      "description_templates": [
+        "Donation to {merchant} for children education",
+        "Sponsored education via {merchant}"
+      ],
+      "merchants": [
+        "CRY",
+        "Smile Foundation",
+        "Teach for India",
+        "Pratham Education"
+      ],
+      "amount_range": [300, 15000]
+    },
+    "Healthcare Support": {
+      "description_templates": [
+        "Funded treatment via {merchant}",
+        "Donation made to {merchant} hospital support"
+      ],
+      "merchants": [
+        "Cancer Aid Society",
+        "Red Cross",
+        "Doctors Without Borders",
+        "Care India"
+      ],
+      "amount_range": [500, 20000]
+    }
+  }
+}

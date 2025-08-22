@@ -1,2 +1,6 @@
 /expense
 /frappe-bench
+__pycache__
+*.csv
+*.pkl
+/flask_session

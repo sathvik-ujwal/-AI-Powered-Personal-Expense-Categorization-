@@ -1,0 +1,38 @@
+{
+  "items": {
+    "Pet Food": {
+      "merchants": ["PetSmart", "Petco", "Heads Up For Tails", "Just Dogs"],
+      "amount_range": [500, 5000],
+      "description_templates": [
+        "Bought pet food from {merchant}",
+        "Pet food purchased at {merchant}",
+        "Paid {amount} for premium pet food at {merchant}"
+      ]
+    },
+    "Veterinary": {
+      "merchants": ["Local Vet Clinic", "Animal Care Hospital"],
+      "amount_range": [1000, 10000],
+      "description_templates": [
+        "Vet consultation at {merchant}",
+        "Medical checkup for pet at {merchant}",
+        "Paid {amount} for veterinary services at {merchant}"
+      ]
+    },
+    "Grooming": {
+      "merchants": ["Pet Grooming Studio", "Heads Up For Tails", "Local Pet Salon"],
+      "amount_range": [500, 5000],
+      "description_templates": [
+        "Pet grooming session at {merchant}",
+        "Paid {amount} for grooming services at {merchant}"
+      ]
+    },
+    "Accessories": {
+      "merchants": ["Zooplus", "DogSpot", "PetSmart"],
+      "amount_range": [300, 4000],
+      "description_templates": [
+        "Bought pet accessories from {merchant}",
+        "New toy for pet at {merchant}"
+      ]
+    }
+  }
+}

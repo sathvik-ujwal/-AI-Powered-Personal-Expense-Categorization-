@@ -1,0 +1,36 @@
+{
+  "items": {
+    "Health Insurance": {
+      "merchants": ["Max Bupa", "HDFC Life", "ICICI Lombard", "Religare"],
+      "amount_range": [2000, 20000],
+      "description_templates": [
+        "Health insurance premium paid at {merchant}",
+        "Policy renewed for health coverage with {merchant}"
+      ]
+    },
+    "Life Insurance": {
+      "merchants": ["LIC", "HDFC Life", "SBI Life"],
+      "amount_range": [5000, 25000],
+      "description_templates": [
+        "Life insurance policy payment at {merchant}",
+        "Paid {amount} towards life insurance with {merchant}"
+      ]
+    },
+    "Car Insurance": {
+      "merchants": ["ICICI Lombard", "Bajaj Allianz", "Tata AIG", "Reliance General Insurance"],
+      "amount_range": [3000, 15000],
+      "description_templates": [
+        "Car insurance premium settled with {merchant}",
+        "Vehicle insurance policy paid via {merchant}"
+      ]
+    },
+    "Travel Insurance": {
+      "merchants": ["ICICI Lombard", "Tata AIG", "New India Assurance"],
+      "amount_range": [1000, 7000],
+      "description_templates": [
+        "Travel insurance purchased from {merchant}",
+        "Trip coverage insured via {merchant}"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "items": {
+    "Salon": {
+      "merchants": ["Naturals Salon", "Lakme Salon", "VLCC", "Toni & Guy"],
+      "amount_range": [500, 5000],
+      "description_templates": [
+        "Haircut and styling at {merchant}",
+        "Beauty treatment session at {merchant}"
+      ]
+    },
+    "Spa": {
+      "merchants": ["Bodycraft", "UrbanClap"],
+      "amount_range": [1000, 8000],
+      "description_templates": [
+        "Spa therapy taken at {merchant}",
+        "Paid {amount} for massage service at {merchant}"
+      ]
+    },
+    "Cosmetics": {
+      "merchants": ["Nykaa", "Health & Glow"],
+      "amount_range": [300, 5000],
+      "description_templates": [
+        "Cosmetic products purchased from {merchant}",
+        "Personal care items ordered at {merchant}"
+      ]
+    }
+  }
+}

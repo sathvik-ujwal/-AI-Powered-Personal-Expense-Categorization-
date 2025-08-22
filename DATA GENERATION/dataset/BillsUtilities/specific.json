@@ -1,0 +1,44 @@
+{
+  "items": {
+    "Electricity": {
+      "merchants": ["State Electricity Board", "Paytm", "Google Pay"],
+      "amount_range": [500, 3000],
+      "description_templates": [
+        "Electricity bill paid via {merchant}",
+        "Power bill settlement at {merchant}"
+      ]
+    },
+    "Water": {
+      "merchants": ["Municipal Water Department", "Paytm", "PhonePe"],
+      "amount_range": [200, 1500],
+      "description_templates": [
+        "Water bill payment through {merchant}",
+        "Paid {amount} for water services at {merchant}"
+      ]
+    },
+    "Gas": {
+      "merchants": ["Bharat Gas", "HP Gas", "Indane"],
+      "amount_range": [500, 2000],
+      "description_templates": [
+        "Gas connection bill at {merchant}",
+        "Cylinder booking via {merchant}"
+      ]
+    },
+    "Internet": {
+      "merchants": ["Airtel", "Jio", "BSNL", "ACT Fibernet"],
+      "amount_range": [500, 2000],
+      "description_templates": [
+        "Internet recharge done at {merchant}",
+        "Paid broadband bill to {merchant}"
+      ]
+    },
+    "Mobile Recharge": {
+      "merchants": ["Airtel", "Jio", "Vi", "BSNL"],
+      "amount_range": [100, 1000],
+      "description_templates": [
+        "Mobile recharge done at {merchant}",
+        "Paid {amount} for prepaid plan at {merchant}"
+      ]
+    }
+  }
+}

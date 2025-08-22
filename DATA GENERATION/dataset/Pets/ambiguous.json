@@ -1,0 +1,18 @@
+{
+  "description_templates": [
+    "Bought pet supplies from {merchant}",
+    "Pet care expense at {merchant}",
+    "Purchased pet essentials via {merchant}",
+    "Paid {amount} for pet service at {merchant}"
+  ],
+  "merchants": [
+    "PetSmart",
+    "Heads Up For Tails",
+    "Petco",
+    "DogSpot",
+    "Just Dogs",
+    "Zooplus",
+    "Local Pet Store"
+  ],
+  "amount_range": [200, 10000]
+}

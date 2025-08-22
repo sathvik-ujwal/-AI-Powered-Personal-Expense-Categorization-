@@ -1,0 +1,19 @@
+{
+  "description_templates": [
+    "Paid electricity bill via {merchant}",
+    "Recharged mobile connection using {merchant}",
+    "Utility bill payment through {merchant}",
+    "Paid {amount} for water bill via {merchant}"
+  ],
+  "merchants": [
+    "Airtel Payments Bank",
+    "Paytm",
+    "PhonePe",
+    "Google Pay",
+    "Amazon Pay",
+    "State Electricity Board",
+    "Municipal Water Department",
+    "Bharat Gas"
+  ],
+  "amount_range": [100, 5000]
+}

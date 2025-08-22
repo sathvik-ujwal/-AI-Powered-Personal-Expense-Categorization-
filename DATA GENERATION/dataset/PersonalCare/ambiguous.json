@@ -1,0 +1,19 @@
+{
+  "description_templates": [
+    "Paid at {merchant}",
+    "Transaction at {merchant}",
+    "Purchase at {merchant}",
+    "Paid {amount} to {merchant}"
+  ],
+  "merchants": [
+    "Naturals Salon",
+    "Lakme Salon",
+    "VLCC",
+    "Toni & Guy",
+    "Bodycraft",
+    "UrbanClap",
+    "Nykaa",
+    "Health & Glow"
+  ],
+  "amount_range": [300, 8000]
+}

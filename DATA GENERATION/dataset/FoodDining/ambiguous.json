@@ -1,0 +1,19 @@
+{
+  "description_templates": [
+    "Dined at {merchant}",
+    "Ordered food from {merchant}",
+    "Meal expense at {merchant}",
+    "Paid {amount} for a dinner at {merchant}"
+  ],
+  "merchants": [
+    "Swiggy",
+    "Zomato",
+    "Domino's",
+    "KFC",
+    "McDonald's",
+    "Starbucks",
+    "Barbeque Nation",
+    "Local Restaurant"
+  ],
+  "amount_range": [150, 5000]
+}

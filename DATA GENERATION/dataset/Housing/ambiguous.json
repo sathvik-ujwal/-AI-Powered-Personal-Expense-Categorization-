@@ -1,0 +1,19 @@
+{
+  "description_templates": [
+    "Rent paid to {merchant}",
+    "Maintenance charges paid at {merchant}",
+    "Household repair services from {merchant}",
+    "Paid {amount} for housing expenses at {merchant}"
+  ],
+  "merchants": [
+    "NestAway",
+    "NoBroker",
+    "MagicBricks",
+    "Housing.com",
+    "Local Landlord",
+    "Society Office",
+    "Apartment Association",
+    "Home Repair Services"
+  ],
+  "amount_range": [2000, 30000]
+}
